@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .carousel img{width: 300px;height: 200px;display:none;}
+        .carousel img.active{display:block;}
+    </style>
+
+    <div class="carousel">
+        <img class="active" src="https://media.gettyimages.com/id/691910455/photo/smiling-businessman-with-brown-bag-walking-in-city.jpg?s=612x612&w=0&k=20&c=5NpgOqGdT-404agHoGsPdPTTQtVTppflZTiKKtUmxm0=">
+        <img src="https://media.gettyimages.com/id/973481674/photo/stylish-man-posing-on-grey-background.jpg?s=612x612&w=0&k=20&c=zn4YXiU1RX4-DHz8XNSSB3PoEKBxpfeFtRTESWX6OWQ=">
+        <img src="https://media.gettyimages.com/id/1696027785/photo/businessman-on-the-city-street.jpg?s=612x612&w=0&k=20&c=QrTdr-LormkVEk4KvdnXT6NZeBUwjtDeEn4euph1hWQ=">
+        <img src="https://media.gettyimages.com/id/660629502/photo/one.jpg?s=612x612&w=0&k=20&c=Z5JbqwrHqwxhM_50fxQmojluMliuma0F3uaxMNlHE1s=">
+        <img src="https://media.gettyimages.com/id/1289461335/photo/portrait-of-a-handsome-black-man.jpg?s=612x612&w=0&k=20&c=gDibbpmkeV04ta3ociwAgpqcjdeU5sI1nnd78wrnz-g=">
+        <img src="https://media.gettyimages.com/id/2167472497/photo/close-up-portrait-of-a-happy-mature-businessman.jpg?s=612x612&w=0&k=20&c=k8ZVWx0ftSW0iSDDFmL-TDVKKj_iLnssKclxbbz2hYM=">
+    </div>
+
+<button onclick="changeslide(+1)">Prev</button>
+<button onclick="changeslide(+1)">Next</button>
+
+<script>
+    let index= 0;
+    const slides=document.querySelectorAll('.carousel img');
+
+    function changeslide(n){
+        slides[index].classList.remove(active);
+        index=(index + n + slides.lenght) %slides.length;
+        slides[index].classList.add(active);
+    }
+</script>
+</body>
+</html>
