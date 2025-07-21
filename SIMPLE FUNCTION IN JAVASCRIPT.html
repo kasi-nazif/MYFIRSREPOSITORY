@@ -1,0 +1,27 @@
+<!DOCTYPE html.
+<html>
+    <head>
+        <title>SIMPLE FUNCTION ON JAVASCRIPT</title>
+    </head>
+    <body>
+        <h2>ADD TWO NUMBERS</h2>
+        <input type="number"id="num1"placeholder="Enter first number">
+        <input type="number"id="num2"placeholder="Enter second number">
+        <button onclick="addNumber()">ADD</button>
+
+<p id="result"></p>        
+        <script>
+            function addNumber(){
+                // get the value from the input fields
+                var a=document.getElementById("num1").value;
+                var b=document.getElementById("num2").value;
+
+                // convert to numbers and add
+                var sum=Number(a) +Number(b);
+
+                // Dispay the result
+                document.getElementById("result").innerHTML="result :" +sum;
+            }
+        </script>
+    </body>
+</html>
