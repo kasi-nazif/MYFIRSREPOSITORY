@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INTRODUCTION TO HTML DOM</title>
+    </head>
+    <body>
+       
+        
+        <h2>WHAT IS A DOM</h2>
+
+        <!--Enplanation paragraph-->
+        <p id="domText">
+            Dom stands for Document Object Model
+            It lets us use javascript to instract with HTMl element
+        </p>
+        
+        <!--Button to update the content-->
+        <button onclick="explainMore()">Learn More</button>
+
+        <script>
+            // function to update paragraph content
+            function explainMore(){
+                document.getElementById("domText").innerHTML="The DOM is like a tree of your HTML. You can use JAVASCRIPT to run node codes"
+            }
+        </script>
+    </body>
+</html>
